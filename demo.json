@@ -30,9 +30,6 @@
             "allOf": [
               {
                 "$ref": "#/components/schemas/repo"
-              },
-              {
-                "description": "Is present when the repo is a fork. Parent is the repo this repo was forked from."
               }
             ]
           }
