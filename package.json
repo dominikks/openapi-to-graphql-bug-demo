@@ -1,0 +1,14 @@
+{
+  "name": "openapi-to-graphql-bug-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "demo": "openapi-to-graphql ./demo.json --save demo-output.graphql"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "openapi-to-graphql-cli": "^1.5.0"
+  }
+}

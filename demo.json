@@ -1,0 +1,44 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Demo created from GitHub v3 API",
+    "version": "v3"
+  },
+  "paths": {
+    "/repo": {
+      "get": {
+        "responses": {
+          "200": {
+            "description": "Fetches a repo",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/repo"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "repo": {
+        "properties": {
+          "parent": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/repo"
+              },
+              {
+                "description": "Is present when the repo is a fork. Parent is the repo this repo was forked from."
+              }
+            ]
+          }
+        },
+        "type": "object"
+      }
+    }
+  }
+}
